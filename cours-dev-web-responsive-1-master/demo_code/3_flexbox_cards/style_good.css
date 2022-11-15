@@ -1,0 +1,101 @@
+body {
+    /* 
+        Setting up some global rules for the webpage : 
+
+        - default font-family to use for all text
+        - default text-color and size
+        - remove default margins of the body element
+    */
+
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    font-size: 14px;
+    margin: 0;
+}
+
+a {
+    /*
+        Getting rid of default formatting for <a> elements. `inherits` tells that
+        `a` elements should use the value set on its parent for these properties.
+    */
+    text-decoration: inherit;
+    color: inherit;
+}
+
+
+.top-header {
+    /* 
+        My solution to display the children block elements horizontally instead of the 
+        default vertical, with flexibility in the way to arrange them. 
+
+        Other possible solutions are : using `float: left`, using `display: inline-block',
+        using CSS grid.
+    */ 
+
+    margin-top: 40px;
+    padding-top: 20px;
+    background-color: #f5f5f5;
+
+}
+
+
+.top-header .nav-menu {
+    display: flex;
+    /* flex positionning of children */
+    align-items: end;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+
+
+    padding-bottom: 15px;
+}
+
+.top-header .nav-menu .menu-item {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+}
+
+.top-header .nav-menu .menu-item.active,
+.top-header .nav-menu .menu-item:hover {
+    color: #61259e;
+}
+
+.content {
+    max-width: 1140px;
+    width: 80vw;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 30px;
+
+}
+
+.content .article-card {
+    flex-basis: 350px;
+    display: flex;
+    min-height: 100px;
+}
+
+.content .article-card .left-placeholder {
+    width: 30px;
+    flex-shrink: 0;
+}
+
+
+.content .article-card .left-placeholder .border-decoration{
+    height: 50px;
+    border-left: 5px solid #61259e;
+}
+
+
+
+.content .article-card .article-content {
+    flex-grow: 1;
+}

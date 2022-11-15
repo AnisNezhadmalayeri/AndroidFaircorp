@@ -1,0 +1,98 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    /*
+        Getting rid of default formatting for <a> elements. `inherits` tells that
+        `a` elements should use the value set on its parent for these properties.
+    */
+    text-decoration: inherit;
+    color: inherit;
+}
+
+body {
+    background-color: #eeeeee;
+}
+
+
+.content {
+    max-width: 800px;
+    width: 70vw;
+    overflow-x: hidden;
+
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;   
+}
+
+@media (max-width: 480px) {
+    .content { 
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+.content > form {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input[type=button], input[type=submit] {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    background-color: #99daff;
+    font-size: 18px;
+    border-radius: 5px;
+
+}
+
+.form-row > label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-row > input[type="text"],
+.form-row > input[type="button"],
+.form-row > input[type="submit"],
+.form-row > input[type="email"],
+.form-row > input[type="password"]
+{
+    display: block;
+    width: 100%;
+}
+
+.form-row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.my-two-words-input:invalid {
+    background-color: red;
+}

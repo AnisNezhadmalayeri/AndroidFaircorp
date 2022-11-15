@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>École des Mines de St Étienne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">     
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet" />
+
+    <link href="style_good.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  </head>
+
+  <body>
+
+    <div class="content">
+    
+      <h1>Student registration</h1>
+      <form action="/register" method="post" class="student-register-form">
+
+
+        <div class="form-row">
+          <label for="your-name">Enter a word without uppercase letter</label>
+          <input type="text" name="your_name" id="your-name" pattern="[a-z]*" class="my-two-words-input">
+        </div>
+    
+        <div class="form-row">
+          <input type="submit" value="Register">
+    
+          <!-- input type="submit"  or button type="submit" is the same-->
+          <!-- <button type="submit">Register</button> -->
+    
+        </div>
+      </form>
+    
+    </div>
+
+  </body>
+</html>
